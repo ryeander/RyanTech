@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //this script helps you to implement the exit functionallity of your screen saver
 //the screen saver should be exited when you press any key or move the mouse and this script does this
@@ -26,7 +27,7 @@ class ScreenSaverControls : MonoBehaviour
         {
             if (Environment.GetCommandLineArgs()[1] == "/c")
             {
-                Application.LoadLevel(settingsScene);
+                SceneManager.LoadScene(settingsScene);
             }
         }
         //store the mouse position of the first frame before update to allow us to get the mouse movement delta
